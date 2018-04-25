@@ -1,13 +1,37 @@
+<script type='text/javascript'>
+
+ $(function() {
+   Dashing.gridsterLayout('[{"col":1,"row":2,"size_x":2,"size_y":1},{"col":1,"row":1,"size_x":2,"size_y":1},{"col":3,"row":1,"size_x":2,"size_y":3},{"col":5,"row":1,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":2,"size_y":1}]')
+   Dashing.widget_base_dimensions = [370, 340]
+   Dashing.numColumns = 5
+ });
+ </script>
+
 <% content_for :title do %>Monitor Dashboard<% end %>
+<center><div style="font-size: 18px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
+
 <div class="gridster">
   <ul>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-view="TwelveHourClock"></div>
+    </li>
+
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is your shiny new dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
-      <div data-id="trafficmap" data-view="Trafficmap" data-title="Minneapolis Traffic" data-lat="44.9614891" data-long="-93.2803107" data-zoom="13.47" ></div>
+       <div style="pointer-events:none;" id="trafficMap" data-view="Iframe" data-url="/traffic.html"></div>
     </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="nest" data-view="Nest" data-title="Nest Temp"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="forecast" data-view="Forecast" data-widget_title="Forecast"> ></div>
+    </li>
+
 
     <!-- <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="synergy" data-view="Meter" data-title="Synergy" data-height="200" data-width="200" data-min="0" data-max="100" data-suffix="%"></div>
@@ -25,5 +49,4 @@
       <div data-id="convergence" data-view="Graph" data-title="Convergence" style="background-color:#ff9618"></div>
     </li> -->
   </ul>
-  <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
 </div>
