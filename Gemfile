@@ -5,3 +5,5 @@ gem 'smashing'
 gem 'nest_thermostat'
 
 gem 'nokogiri'
+
+gem 'icalendar'
