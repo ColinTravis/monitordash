@@ -8,6 +8,8 @@ SCHEDULER.every '15s', :first_in => 4 do |job|
   calendars = Icalendar::Calendar.parse(result)
   calendar = calendars.first
 
+  # ical_multiline_property :related_to, :related_to, :related_to
+
   events = calendar.events.map do |event|
     {
       start: event.dtstart,

@@ -1,14 +1,15 @@
 <script type='text/javascript'>
 
  $(function() {
-   Dashing.gridsterLayout('[{"col":1,"row":2,"size_x":2,"size_y":1},{"col":1,"row":1,"size_x":2,"size_y":1},{"col":3,"row":1,"size_x":2,"size_y":3},{"col":5,"row":1,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":2,"size_y":1}]')
-   Dashing.widget_base_dimensions = [370, 340]
+   Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":2,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":2,"size_y":3},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":2,"size_y":1},{"col":2,"row":3,"size_x":2,"size_y":1}]')
+   Dashing.widget_base_dimensions = [300, 270]
    Dashing.numColumns = 5
  });
  </script>
 
 
 <% content_for :title do %>Monitor Dashboard<% end %>
+<div data-id="reload" data-view="Reload" data-title="Reload" style="display: none"></div> <!-- RELOAD -->
 <center><div style="font-size: 18px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center>
 
 <div class="gridster">
@@ -17,8 +18,12 @@
       <div data-view="TwelveHourClock"></div>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="welcome" data-view="Text" data-title="Hello" data-text="This is the dashboard." data-moreinfo="Drag"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="empty" data-view="Text" data-title="" data-text="" data-moreinfo="" style="background-color: #47bbb3;"></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="3">
@@ -30,10 +35,10 @@
     </li>
 
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="forecast" data-view="Forecast" data-widget_title="Forecast"> ></div>
+      <div data-id="forecast" data-view="Forecast" data-widget_title=""> ></div>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="google_calendar" data-view="GoogleCalendar"></div>
     </li>
 

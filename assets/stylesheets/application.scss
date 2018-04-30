@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color: #222;
+$background-color: #fff;
 $text-color: #fff;
 
 $background-danger-color-1: #e82711;
@@ -15,6 +15,8 @@ $text-danger-color: #fff;
 $background-warning-color-1: #eeae32;
 $background-warning-color-2: #ff9618;
 $text-warning-color: #fff;
+
+$card-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
 
 @-webkit-keyframes status-warning-background {
   0%   { background-color: $background-warning-color-1; }
@@ -46,7 +48,7 @@ body {
   background-color: $background-color;
   font-size: 20px;
   color: $text-color;
-  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Futura', 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 b, strong {
@@ -104,7 +106,7 @@ h2 {
   color: $text-color;
 }
 h3 {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
   color: $text-color;
 }
@@ -149,6 +151,7 @@ h3 {
   height: inherit;
   display: table-cell;
   vertical-align: middle;
+  box-shadow: $card-shadow;
 }
 
 .widget.status-warning {
@@ -255,4 +258,3 @@ h3 {
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-
