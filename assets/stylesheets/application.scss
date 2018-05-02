@@ -36,6 +36,31 @@ $dash-font: 'Product Sans', 'Futura', "Helvetica Neue", Helvetica, sans-serif;
   -ms-animation:      $animation-name $duration $function #{$animation-iteration-count};
 }
 
+@font-face {
+  font-family: 'Product Sans';
+  src: url("../assets/product_sans_regular.woff") format('woff'), url("../assets/product_sans_regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Product Sans';
+  src: url("../assets/product_sans_italic.woff") format('woff'), url("../assets/product_sans_italic.ttf") format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Product Sans';
+  src: url("../assets/product_sans_bold.woff") format('woff'), url("../assets/product_sans_bold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Product Sans';
+  src: url("../assets/product_sans_bold_italic.woff") format('woff'), url("../assets/product_sans_bold_italic.ttf") format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 // ----------------------------------------------------------------------------
 // Base styles
 // ----------------------------------------------------------------------------
@@ -50,7 +75,7 @@ body {
   background-color: $background-color;
   font-size: 20px;
   color: $text-color;
-  font-family: 'Product Sans', 'Futura', "Helvetica Neue", Helvetica, sans-serif;
+  font-family: $dash-font;
   -webkit-font-smoothing: antialiased;
 }
 
