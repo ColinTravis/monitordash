@@ -1,11 +1,14 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #26C281; //#47bbb3;
+$background-color:  #e91e63; //#31E7B6; //#47bbb3;
 
+// $title-color:       #202124;
+// $subtitle-color:    darken(#202124, .2);
+// $moreinfo-color:    darken(#202124, .2);
 $title-color:       rgba(255, 255, 255, 1);
-$subtitle-color:    rgba(255, 255, 255, 0.7);
-$moreinfo-color:    rgba(255, 255, 255, 0.7);
+$subtitle-color:    rgba(255, 255, 255, 1);
+$moreinfo-color:    rgba(255, 255, 255, 1);
 
 // ----------------------------------------------------------------------------
 // Widget-calendar styles
@@ -25,7 +28,9 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   .times {
+    color: $subtitle-color;
     font-size: 0.9em;
+    font-weight: bold;
   }
 
   .calendar-separator {
@@ -42,7 +47,8 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
       // border-bottom: 1px solid $subtitle-color;
       td {
         text-align: left !important;
-        padding-left: 30px
+        padding-left: 30px;
+        color: $moreinfo-color;
       }
     }
   }
