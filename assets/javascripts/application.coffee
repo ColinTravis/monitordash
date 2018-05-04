@@ -5,8 +5,6 @@
 #= require_directory .
 #= require_tree ../../widgets
 
-
-
 console.log("Yeah! The dashboard has started!")
 
 Dashing.on 'ready', ->
@@ -15,6 +13,13 @@ Dashing.on 'ready', ->
   Dashing.numColumns ||= 4
 
   contentWidth = (Dashing.widget_base_dimensions[0] + Dashing.widget_margins[0] * 2) * Dashing.numColumns
+
+  d = new Date
+  n = d.getHours()
+  if n >= 19 or n <= 7
+    $('body').addClass 'night-mode'
+  else
+    $('body').removeClass 'night-mode'
 
   Batman.setImmediate ->
     $('.gridster').width(contentWidth)

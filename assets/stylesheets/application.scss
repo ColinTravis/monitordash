@@ -6,6 +6,7 @@
 // Sass declarations
 // ----------------------------------------------------------------------------
 $background-color: #fff;
+$darkbackground-color: rgb(35,35,35);
 $text-color: #fff;
 
 $background-danger-color-1: #e82711;
@@ -77,8 +78,11 @@ body {
   color: $text-color;
   font-family: $dash-font;
   -webkit-font-smoothing: antialiased;
+  transition: background-color ease 2s;
 }
-
+.night-mode {
+  background-color: $darkbackground-color;
+}
 b, strong {
   font-weight: bold;
 }
