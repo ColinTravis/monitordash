@@ -73,6 +73,7 @@ html {
 
 body {
   margin: 0;
+  height: 100vh;
   background-color: $background-color;
   font-size: 20px;
   color: $text-color;
@@ -282,6 +283,10 @@ h3 {
 
 #container {
   padding-top: 5px;
+  display: flex;
+  height: 100%;
+  position: relative;
+  align-items: center;
 }
 
 #trafficMap {
