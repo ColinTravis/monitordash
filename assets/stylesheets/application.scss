@@ -80,6 +80,7 @@ body {
   font-family: $dash-font;
   -webkit-font-smoothing: antialiased;
   transition: background-color ease 2s;
+  overflow: hidden;
 }
 .night-mode {
   background-color: $darkbackground-color;
